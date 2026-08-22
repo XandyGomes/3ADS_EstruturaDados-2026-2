@@ -1,0 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.alexandre.aulased3ads20262;
+
+import java.util.Arrays;
+
+/**
+ *
+ * @author Alexandre
+ */
+public class BubbleSort {
+    public static <BS extends Comparable<BS>> 
+        void bubbleSort(BS[] vetor){
+        boolean trocou;
+        do{
+            trocou = false;
+            
+            for(int i = 0; i < vetor.length - 1; i++){
+                if(vetor[i].compareTo(vetor[i+1]) > 0){
+                    BS temp = vetor[i];
+                    vetor[i] = vetor[i+1];
+                    vetor[i+1] = temp;
+                    trocou = true;
+                }
+            }
+        }while(trocou);
+    }
+    
+    public static void main(String[] args) {
+        Integer[] numsDesord = {77,44,22,33,77,99,55,88,0,66,11};
+        String[] nomesDesord = {"MARIA", "JOAO", "ANA", "CARLOS", "BEATRIZ"};
+        
+        bubbleSort(numsDesord);
+        System.out.println(Arrays.toString(numsDesord));
+
+        bubbleSort(nomesDesord);
+        System.out.println(Arrays.toString(nomesDesord));
+        
+    }
+}
+
+
+
+
+
+
